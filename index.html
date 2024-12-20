@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- <link rel="stylesheet" href="port.css" type="text/css"> -->
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h2>geni</h2>
+        </div>
+        <nav>
+            <a href="" style="--h:#fff">Home</a>
+            <a href="" style="--h:cyan">About</a>
+            <a href="" style="--h:gold">Projects</a>
+            <a href="" style="--h:orangered">Contact</a>
+        </nav>
+    </header>
+    <section class="ex_sec1">
+        <div class="ex_container1">
+            <h2>I'm Mustapha Adegbite</h2>
+            <p>Lorem ipsum dolor sit amet, adipisicing elit. Quidem dolor illum corrupti sequi ut nisi, eos libero laborum inventore temporibus ad doloribus sit architecto?</p>
+            <div class="social_media_links">
+                <a href="" style="--f:red"><i class='bx bxl-facebook'></i></a>
+                <a href="" style="--f:orangered"><i class='bx bxl-youtube' ></i></a>
+                <a href="" style="--f:lime"><i class='bx bxl-linkedin' ></i></a>
+                <a href="" style="--f:gold"><i class='bx bxl-twitter' ></i></a>
+            </div>
+        </div>
+        <div class="ex_container2">
+            <img src="images/IMG_20240803_113542_047.jpg" alt="">
+        </div>
+    </section>
+    <section class="sec1">
+        <div class="container1">
+            <h2>Who Am I ?</h2>
+            <p>Lorem, ipsum dolor sit amet elit.Ratione, quas ullam maiores cumque fuga ad itaque iusto nulla?
+                Consectetur Corrupti adipisicing, quas consectetur! Lorem ipsum dolor sit, amet consectetur adipisicing
+                elit. Amet, repellendus veritatis ducimus incidunt, optio impedit! Minus!</p>
+        </div>
+    </section>
+    <section class="sec2">
+        <div class="projects">
+            <h2>_Projects_</h2>
+        </div>
+        <div class="container2">
+            <div class="card" style="--i:-1">
+                <div class="inner">
+                    <img src="images/IMG_20240803_113533_335.jpg" alt="">
+                    <h2>proj <span>1</span></h2>
+                    <p><i><a href="">Click Here</a></i> to go to my first Project.</p>
+                </div>
+            </div>
+            <div class="card" style="--i:0">
+                <div class="inner">
+                    <img src="images/IMG_20240803_113340_330.jpg" alt="">
+                    <h2>proj <span>2</span></h2>
+                    <p><i><a href="">Click Here</a></i> to go to my second Project.</p>
+                </div>
+            </div>
+            <div class="card" style="--i:1">
+                <div class="inner">
+                    <img src="images/IMG_20240803_113542_047.jpg" alt="">
+                    <h2>proj <span>3</span></h2>
+                    <p><i><a href="">Click Here</a></i> to go to my third Project.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sec3">
+        <h2>Contact <span>Me!</span></h2>
+        <div class="overall_sec3_container">
+            <div class="conatiner3">
+                <input type="text" placeholder="Full Name">
+                <input type="number" placeholder="Mobile Number">
+            </div>
+            <div class="conatiner4">
+                <input type="email" placeholder="Email Address">
+                <input type="text" placeholder="Email Subject">
+            </div>
+        </div>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <button type="submit" class="send_msg">Send Message</button>
+    </section>
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    /* background-color: rgb(1, 43, 57); */
+    background-color: rgb(1, 33, 44);
+}
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 5em;
+}
+header .logo h2 {
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(1, 33, 44);
+    -webkit-text-stroke: .4px #fff;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px #fff;
+}
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+}
+header nav a {
+    font-size: 23px;
+    color: var(--h);
+    background-color: rgb(1, 43, 57);
+    width: fit-content;
+    height: 2em;
+    padding-left: 25px;
+    padding-right: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    text-decoration: none;
+    text-shadow: 0 0 9px var(--h);
+    position: relative;
+}
+@property --e {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+header nav a::before, header nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background: conic-gradient(from var(--e), transparent, transparent, var(--h));
+    z-index: -1;
+    padding: 2px;
+    border-radius: 16px;
+    animation: animate 4s linear infinite;
+    transition: .5s;
+    transition-delay: .5s;
+}
+header nav a::after {
+    opacity: .6px;
+    filter: blur(20px);
+}
+header nav a:hover::before, header nav a:hover::after {
+    width: 100%;
+}
+@keyframes animate {
+    0% {
+        --e: 0deg;
+    }
+    100% {
+        --e: 360deg;
+    }
+}
+.sec1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 29em;
+    flex-direction: column;
+}
+.container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 1em;
+}
+.sec1 .container1 h2 {
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+    color: cyan;
+    text-shadow: 0 0 10px cyan;
+    letter-spacing: 1px;
+}
+.sec1 .container1 p {
+    font-size: 20px;
+    font-family: serif;
+    letter-spacing: 1px;
+    line-height: 30px;
+    color: #fff;
+    max-width: 1000px;
+    text-align: center;
+    text-shadow: 0 0 10px #fff;
+}
+.sec2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40em;
+    flex-direction: column;
+    row-gap: 1em;
+    /* background-color: #ff0000; */
+}
+.container2 {
+    position: relative;
+    width: 70%;
+    height: 100%;
+}
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: calc(50% - 150px);
+    left: 50%;
+    width: 300px;
+    height: 28em;
+    background: #444;
+    transform: translateX(-50%) translateY(calc(50px * var(--i))) rotate(40deg) skew(-20deg, -10deg) scale(0.6);
+    /* box-shadow: 25px 25px 100px rgba(0, 0, 0, .2); */
+    box-shadow: 0 0 10px #fff;
+    z-index: calc(-1 * var(--i));
+    transition: .5s;
+    transition-delay: .6s;
+}
+.card:nth-child(2) {
+    opacity: 0.8;
+}
+.card:nth-child(3) {
+    opacity: 0.6;
+}
+.container2:hover .card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(calc(-50% + calc(320px * var(--i)))) translateY(-50%) rotate(0deg) skew(0deg, 0deg) scale(1);
+}
+.container2:hover .card:nth-child(3) {
+    opacity: 1;
+}
+.container2:hover .card:nth-child(2) {
+    opacity: 1;
+}
+.inner {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 1em;
+    align-items: center;
+}
+.inner h2 {
+    font-size: 50px;
+    color: cyan;
+    /* text-transform: uppercase; */
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 0 0 10px #000;
+}
+.inner h2::first-letter {
+    text-transform: uppercase;
+}
+.inner p {
+    font-size: 23px;
+    color: #fff;
+    font-family: Lora;
+    max-width: 226px;
+    text-align: center;
+    text-shadow: 0 0 15px #000;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+.inner p a {
+    /* text-decoration: #000; */
+    font-weight: 600;
+    -webkit-text-stroke: .8px #fff;
+    font-family: Lora;
+    text-transform: uppercase;
+    text-shadow: 0 0 9px #000;
+    color: #fff;
+}
+.projects h2 {
+    color: cyan;
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+.inner img {
+    width: 90%;
+    height: 9em;
+    border-radius: 10px;
+    border: 5px solid #fff;
+    box-shadow: 0 0 20px #000;
+}
+.card::before, .card::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background: conic-gradient(from var(--e), transparent, transparent, gold); */
+    background: conic-gradient(from var(--e), cyan, red, gold);
+    z-index: -1;
+    padding: 2px;
+    /* border-radius: 16px; */
+    animation: animate 4s linear infinite;
+    transition: 1s;
+    /* transition-delay: .5s; */
+}
+.inner h2 span {
+    color: #fff;
+}
+.card::after {
+    opacity: .6px;
+    filter: blur(20px);
+}
+/* .card:hover::before, .card:hover::after {
+    width: 100%;
+} */
+.card:nth-child(1)::before, .card:nth-child(1)::after, .card:nth-child(3)::before, .card:nth-child(3)::after {
+    transition: 1s;
+    width: 0;
+}
+@keyframes animate {
+    0% {
+        --e: 0deg;
+    }
+    100% {
+        --e: 360deg;
+    }
+}
+.container2:hover .card:nth-child(2)::before, .container2:hover .card:nth-child(2)::after {
+    width: 0;
+    height: 0;
+}
+.container2:hover .card:nth-child(1)::before, .container2:hover .card:nth-child(1)::after, .container2:hover .card:nth-child(3)::before, .container2:hover .card:nth-child(3)::after {
+    transition: 1s;
+    width: 100%;
+}
+
+.sec3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 43em;
+    row-gap: 1em;
+    flex-direction: column;
+}
+.overall_sec3_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    column-gap: 1em;
+}
+
+.conatiner3, .conatiner4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 1em;
+}
+.conatiner3 input, .conatiner4 input {
+    width: 16em;
+    background-color: unset;
+    font-size: 20px;
+    padding-left: 16px;
+    height: 2.4em;
+    font-family: Lora;
+    border-radius: 8px;
+    border: unset;
+    color: #fff;
+    outline: unset;
+    box-shadow: 0 0 5px #fff;
+}
+.conatiner3 input::placeholder, .conatiner4 input::placeholder {
+    color: #fff;
+    font-family: Lora;
+    /* font-family: 'Poppins', sans-serif; */
+}
+.sec3 textarea {
+    width: 41.4%;
+    height: 17em;
+    border: 4px solid #fff;
+    font-size: 20px;
+    outline: none;
+    padding: 17px;
+    color: #fff;
+    box-shadow: 0 0 5px #fff;
+    /* background: rgba(255, 255, 255, .1); */
+    background: rgba(225, 225, 225, .1);
+    backdrop-filter: blur(20px);
+    font-family: Lora;
+    /* border: 2px solid #000; */
+    border-radius: 13px;
+}
+.sec3 button {
+    width: 12em;
+    border-radius: 12px;
+    font-size: 22px;
+    font-family: Lora;
+    text-shadow: 0 0 10px #000;
+    color: #fff;
+    background-color: unset;
+    border: 1px solid cyan;
+    height: 2.5em;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.sec3 button::before, .sec3 button::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    border-radius: 20px;
+    padding: 8px;
+    height: 100%;
+    transform: translate(-3%, -10%);
+    animation: animate 4s linear infinite;
+    transition: .5s;
+    background-color: cyan;
+    transition-delay: .5s;
+}
+.sec3 button::after {
+    opacity: .6px;
+    filter: blur(20px);
+}
+.sec3 button:hover::before, .sec3 button:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+
+.sec3 h2 {
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(1, 33, 44);
+    text-shadow: 0 0 5px #fff;
+    -webkit-text-stroke: .6px #fff;
+}
+.sec3 h2 span {
+    color: cyan;
+    text-shadow: 0 0 5px cyan;
+    -webkit-text-stroke: 0 #fff;
+}
+.ex_sec1 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 30em;
+}
+.ex_container1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 1.5em;
+}
+.ex_container1 h2 {
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    text-shadow: 0 0 5px #fff;
+}
+.ex_container1 p {
+    font-size: 20px;
+    color: #fff;
+    max-width: 500px;
+    text-align: left;
+    line-height: 30px;
+}
+.ex_container2 img {
+    width: 25em;
+    border-radius: 20px;
+    border-left: 5px solid #fff;
+    border-bottom: 5px solid #fff;
+    border-right: 5px solid cyan;
+    border-top: 5px solid cyan;
+    width: 25em;
+}
+.social_media_links {
+    display: flex;
+    column-gap: .7em;
+    align-items: center;
+}
+.social_media_links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    border: 3px solid #fff;
+    width: 2.6em;
+    border-radius: 13px;
+    height: 2.6em;
+    position: relative;
+}
+.social_media_links a::before, .social_media_links a::after {
+    content: '';
+    position: absolute;
+    background: conic-gradient(from var(--e), transparent, transparent, var(--f));
+    width: 100%;
+    z-index: -1;
+    border-radius: 20px;
+    padding: 10px;
+    height: 100%;
+    animation: animate 4s linear infinite;
+    transition: .5s;
+    transition-delay: .5s;
+}
+.social_media_links a::after {
+    opacity: .6px;
+    filter: blur(20px);
+}
+.social_media_links a:hover::before, .social_media_links a:hover::after {
+    transition-delay: .5s;
+    width: 100%;
+    height: 100%;
+    padding: 4px;
+    background: var(--f);
+    transition:  .5s;
+}
+@keyframes animate {
+    0% {
+        --e: 0deg;
+    }
+    100% {
+        --e: 360deg;
+    }
+}
+  </style>
+</body>
+
+</html>
